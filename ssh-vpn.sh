@@ -384,16 +384,15 @@ wget -O port-ws "https://raw.githubusercontent.com/lesta-1/sc/main/port-ws.sh"
 wget -O port-vless "https://raw.githubusercontent.com/lesta-1/sc/main/port-vless.sh"
 wget -O wbmn "https://raw.githubusercontent.com/lesta-1/sc/main/webmin.sh"
 wget -O xp "https://raw.githubusercontent.com/lesta-1/sc/main/xp.sh"
-wget -O kernel-updt "https://raw.githubusercontent.com/lesta-1/sc/main/kernel-update.sh"
+wget -O update "https://raw.githubusercontent.com/lesta-1/sc/main/update.sh"
+wget -O /usr/bin/user-limit https://raw.githubusercontent.com/lesta-1/sc/main/user-limit.sh && chmod +x /usr/bin/user-limit
 wget -O cfd "https://raw.githubusercontent.com/lesta-1/sc/main/cfd.sh"
 wget -O cff "https://raw.githubusercontent.com/lesta-1/sc/main/cff.sh"
 wget -O cfh "https://raw.githubusercontent.com/lesta-1/sc/main/cfh.sh"
 wget -O autoreboot "https://raw.githubusercontent.com/lesta-1/sc/main/autoreboot.sh"
-wget -O swap "https://raw.githubusercontent.com/lesta-1/sc/main/swapkvm.sh"
-wget -O /usr/bin/user-limit https://raw.githubusercontent.com/lesta-1/sc/main/user-limit.sh && chmod +x /usr/bin/user-limit"
 wget -O running "https://raw.githubusercontent.com/lesta-1/sc/main/running.sh"
 chmod +x add-host
-chmod +x about
+chmod +x menu
 chmod +x usernew
 chmod +x trial
 chmod +x hapus
@@ -403,7 +402,7 @@ chmod +x cek
 chmod +x restart
 chmod +x speedtest
 chmod +x info
-chmod +x menu
+chmod +x about
 chmod +x autokill
 chmod +x tendang
 chmod +x ceklim
@@ -421,14 +420,13 @@ chmod +x port-ws
 chmod +x port-vless
 chmod +x wbmn
 chmod +x xp
-chmod +x kernel-updt
+chmod +x update
 chmod +x cfd
 chmod +x cff
 chmod +x cfh
 chmod +x autoreboot
 chmod +x running
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
-echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files
 cd
 apt autoclean -y
