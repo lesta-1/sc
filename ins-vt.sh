@@ -14,7 +14,6 @@ chronyc tracking -v
 date
 
 mkdir -p /etc/trojan/
-touch /etc/trojan/akun.conf
 # install v2ray
 wget https://raw.githubusercontent.com/lesta-1/sc/main/go.sh && chmod +x go.sh && ./go.sh
 rm -f /root/go.sh
@@ -22,6 +21,8 @@ bash -c "$(wget -O- https://raw.githubusercontent.com/trojan-gfw/trojan-quicksta
 mkdir /root/.acme.sh
 curl https://acme-install.netlify.app/acme.sh -o /root/.acme.sh/acme.sh
 chmod +x /root/.acme.sh/acme.sh
+cd /root/.acme.sh
+bash acme.sh --register-account -m admin@rpj-dapon.com
 /root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256
 ~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/v2ray/v2ray.crt --keypath /etc/v2ray/v2ray.key --ecc
 service squid start
