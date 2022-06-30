@@ -84,4 +84,5 @@ echo -e "link TLS       : ${vmesslink1}"
 echo -e "================================="
 echo -e "link none TLS  : ${vmesslink2}"
 echo -e "================================="
+echo -e "Script Install  : DAPON WISANG
 echo -e "Expired On     : $exp"
